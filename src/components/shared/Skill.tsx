@@ -186,7 +186,7 @@ const Skill = () => {
               <div
                 className={cn(
                   "w-61 h-9 border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
-                  "absolute top-[20%] left-[10%] -rotate-2",
+                  "absolute top-[20%] left-[5%] -rotate-2",
                   "max-2xl:static max-2xl:rotate-none",
                 )}
               >
@@ -196,7 +196,7 @@ const Skill = () => {
               <div
                 className={cn(
                   "w-61 h-9 border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
-                  "absolute bottom-[10%] left-[20%] rotate-2",
+                  "absolute bottom-[5%] left-[10%] rotate-2",
                   "max-2xl:static max-2xl:rotate-none",
                 )}
               >
@@ -208,7 +208,7 @@ const Skill = () => {
               <div
                 className={cn(
                   "w-61 h-9 border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
-                  "absolute top-[25%] right-[20%] -rotate-2",
+                  "absolute top-[20%] right-[5%] -rotate-2",
                   "max-2xl:static max-2xl:rotate-none",
                 )}
               >
@@ -218,7 +218,7 @@ const Skill = () => {
               <div
                 className={cn(
                   "w-61 h-9 border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
-                  "absolute bottom-[10%] right-[5%] rotate-2",
+                  "absolute bottom-[5%] right-0 rotate-2",
                   "max-2xl:static max-2xl:rotate-none",
                 )}
               >
@@ -236,24 +236,24 @@ const Skill = () => {
                   src={ClosedBookIcon}
                   alt="closed book icon"
                   className={cn(
-                    "top-[20px] left-[50px] scale-x-[-1] translate-y-[5px]",
+                    "top-[10px] left-[25px] scale-x-[-1] translate-y-[5px]",
                   )}
                 />
                 <img
                   src={ClosedBookIcon}
                   alt="closed book icon"
-                  className={cn("top-[40%] left-[45%] rotate-120")}
+                  className={cn("top-[50%] left-[47%] rotate-120")}
                 />
                 <img
                   src={ClosedBookIcon}
                   alt="closed book icon"
-                  className={cn("top-[10%] right-[20%]")}
+                  className={cn("top-[5%] right-[10%]")}
                 />
                 <img
                   src={ClosedBookIcon}
                   alt="closed book icon"
                   className={cn(
-                    "bottom-[20%] right-[5%] scale-x-[-1] rotate-[-40deg]",
+                    "bottom-[10%] right-[3%] scale-x-[-1] rotate-[-10deg]",
                   )}
                 />
               </div>

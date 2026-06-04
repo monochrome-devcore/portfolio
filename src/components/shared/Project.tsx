@@ -44,7 +44,7 @@ const Project = () => {
             <Card
               key={project.id}
               className={cn(
-                "group border border-blue-950/5 rounded-[16px] bg-white p-0 shadow-md ring-0 transition-all duration-500 ease-initial",
+                "group text-base border border-blue-950/5 rounded-[16px] bg-white p-0 shadow-md ring-0 transition-all duration-500 ease-initial",
                 "hover:shadow-xl hover:scale-[1.03] hover:-skew-x-1 hover:-skew-y-1",
               )}
             >
@@ -78,14 +78,14 @@ const Project = () => {
 
                       <p
                         className={cn(
-                          "text-neutral-600 line-clamp-3 text-pretty",
+                          "text-base text-neutral-600 line-clamp-3 text-pretty",
                         )}
                       >
                         {project.description}
                       </p>
                     </div>
 
-                    <p className={cn("line-clamp-1")}>
+                    <p className={cn("text-base line-clamp-1")}>
                       💡 <span className="text-neutral-600">Develop By</span>{" "}
                       <span className={cn("text-blue-950 font-semibold")}>
                         {project.developBy}
