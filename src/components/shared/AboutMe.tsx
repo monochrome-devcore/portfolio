@@ -72,7 +72,10 @@ const AboutMe = () => {
             <Button
               asChild
               size={"xl"}
-              className={cn("p-3 w-60 max-w-[80%] btn-gradient")}
+              className={cn(
+                "p-3 w-[240px] max-w-[80%] rounded-[8px] btn-gradient",
+                "max-md:text-[14px]",
+              )}
             >
               <a
                 href="../../assets/CV_Resume.pdf"
@@ -89,7 +92,10 @@ const AboutMe = () => {
               asChild
               variant={"outline"}
               size={"xl"}
-              className={cn("p-3 w-60 max-w-[80%] shadow-none")}
+              className={cn(
+                "p-3 w-[240px] max-w-[80%] rounded-[8px] shadow-none",
+                "max-md:text-[14px]",
+              )}
             >
               <a
                 href="#ProjectContainer"

@@ -13,7 +13,7 @@ import { Marquee } from "@/components/ui/marquee";
 
 const Skill = () => {
   return (
-    <section className={cn("block my-30")}>
+    <section className={cn("block mt-20")}>
       <div
         className={cn("container flex flex-col gap-8 mx-auto my-0 py-0 px-8")}
       >
@@ -35,7 +35,7 @@ const Skill = () => {
 
         <div
           className={cn(
-            "grid grid-cols-[repeat(3,minmax(100px,1fr))] grid-rows-[repeat(2,320px)] gap-3",
+            "grid grid-cols-[repeat(3,minmax(100px,1fr))] grid-rows-[repeat(2,minmax(320px,auto))] gap-3",
             "max-md:grid-cols-[repeat(1,minmax(200px,1fr))] max-md:grid-rows-[repeat(4,minmax(280px,auto))]",
           )}
         >
@@ -43,7 +43,7 @@ const Skill = () => {
           <div
             className={cn(
               "overflow-hidden rounded-[24px] bg-[url(@/assets/cat1.jpeg)] bg-center bg-no-repeat bg-cover p-8 shadow-md",
-              "max-md:p-4 max-md:col-span-1 max-md:row-span-1",
+              "max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-first",
             )}
           ></div>
 
@@ -51,7 +51,7 @@ const Skill = () => {
           <div
             className={cn(
               "flex flex-col justify-between col-span-2 overflow-hidden border-2 border-blue-100 rounded-[24px] bg-[hsl(213,100%,98%)] p-8 shadow-md",
-              "max-md:p-4 max-md:col-span-1 max-md:row-span-1",
+              "max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-2",
             )}
           >
             <div className={cn("")}>
@@ -82,7 +82,7 @@ const Skill = () => {
                       return (
                         <div
                           className={cn(
-                            "flex items-center justify-center gap-[1.14em] rounded-[12px] py-[0.6em] px-0 w-[12em] font-bold text-xs uppercase",
+                            "flex items-center justify-center gap-[1.14em] rounded-[12px] py-[0.6em] px-0 w-[12em] font-bold text-sm uppercase",
                             isEven
                               ? "skill-gradient"
                               : "bg-white border border-[hsl(215,100%,94%)]",
@@ -123,7 +123,7 @@ const Skill = () => {
                       return (
                         <div
                           className={cn(
-                            "flex items-center justify-center gap-[1.14em] rounded-[12px] py-[0.6em] px-0 w-[12em] font-bold text-xs uppercase",
+                            "flex items-center justify-center gap-[1.14em] rounded-[12px] py-[0.6em] px-0 w-[12em] font-bold text-sm uppercase",
                             isEven
                               ? "skill-gradient"
                               : "bg-white border border-[hsl(215,100%,94%)]",
@@ -157,7 +157,7 @@ const Skill = () => {
           <div
             className={cn(
               "flex flex-col justify-between col-span-2 overflow-hidden border-2 border-blue-100 rounded-[24px] bg-[hsl(213,100%,98%)] p-8 shadow-md",
-              "max-md:p-4 max-md:col-span-1 max-md:row-span-1",
+              "max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-last",
             )}
           >
             <div className={cn("")}>
@@ -180,22 +180,22 @@ const Skill = () => {
 
             <div
               className={cn(
-                "relative flex flex-wrap content-center justify-center flex-1 gap-2 mt-2",
+                "relative flex flex-wrap content-center justify-center flex-1 gap-2 mt-4",
               )}
             >
               <div
                 className={cn(
-                  "w-61 h-9 border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
+                  "w-[244px] h-[36px] border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
                   "absolute top-[20%] left-[5%] -rotate-2",
                   "max-2xl:static max-2xl:rotate-none",
                 )}
               >
-                <p className={cn("text-gradient")}>Giao tiếp chuyên nghiệp</p>
+                <p className={cn("text-gradient")}>Khả năng làm việc nhóm</p>
               </div>
 
               <div
                 className={cn(
-                  "w-61 h-9 border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
+                  "w-[244px] h-[36px] border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
                   "absolute bottom-[5%] left-[10%] rotate-2",
                   "max-2xl:static max-2xl:rotate-none",
                 )}
@@ -207,17 +207,17 @@ const Skill = () => {
 
               <div
                 className={cn(
-                  "w-61 h-9 border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
+                  "w-[244px] h-[36px] border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
                   "absolute top-[20%] right-[5%] -rotate-2",
                   "max-2xl:static max-2xl:rotate-none",
                 )}
               >
-                <p className={cn("text-gradient")}>Đáng tin cậy</p>
+                <p className={cn("text-gradient")}>Tư duy làm sản phẩm</p>
               </div>
 
               <div
                 className={cn(
-                  "w-61 h-9 border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
+                  "w-[244px] h-[36px] border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize",
                   "absolute bottom-[5%] right-0 rotate-2",
                   "max-2xl:static max-2xl:rotate-none",
                 )}
@@ -265,7 +265,7 @@ const Skill = () => {
             className={cn(
               "overflow-hidden rounded-[24px] bg-[url(@/assets/cat3.jpeg)] bg-center bg-no-repeat bg-cover p-8 shadow-md",
               "hover:bg-[url(@/assets/cat2.jpeg)]",
-              "max-md:p-4 max-md:col-span-1 max-md:row-span-1",
+              "max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-3",
             )}
           ></div>
         </div>

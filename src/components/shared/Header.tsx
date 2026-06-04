@@ -16,7 +16,7 @@ const Header = () => {
       >
         <div
           className={cn(
-            "flex items-center flex-1 gap-6",
+            "flex items-center flex-1 gap-8",
             "max-xl:flex-col max-xl:items-center",
           )}
         >
