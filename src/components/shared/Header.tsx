@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 const Header = () => {
   return (
-    <header className={cn("mt-10", "max-md:mt-5")}>
+    <header className={cn("mt-10", "max-md:mt-12")}>
       <div
         className={cn(
           "container flex gap-10 px-8 py-0",
@@ -49,7 +49,9 @@ const Header = () => {
           </div>
 
           <div className={cn("flex flex-col gap-2", "max-xl:items-center")}>
-            <h2 className={cn("text-[26px] font-semibold")}>Monochrome</h2>
+            <h2 className={cn("text-[26px] font-semibold", "max-md:text-2xl")}>
+              Monochrome
+            </h2>
 
             <div className={cn("flex gap-1.5 text-center", "max-md:flex-col")}>
               <div
@@ -90,7 +92,9 @@ const Header = () => {
             "max-xl:items-center max-xl:text-center",
           )}
         >
-          <h2 className={cn("text-[26px] font-semibold")}>Thông Tin Liên Hệ</h2>
+          <h2 className={cn("text-[26px] font-semibold", "max-md:text-2xl")}>
+            Thông Tin Liên Hệ
+          </h2>
 
           <p className={cn("text-neutral-600")}>
             Gửi email cho mình tại:{" "}
