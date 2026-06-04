@@ -116,6 +116,21 @@
   }
 }
 
+@utility btn-gradient {
+  background-image: linear-gradient(
+    to right,
+    #4a5ce3 0%,
+    #8e54e9 52%,
+    #4a5ce3 100%
+  );
+  background-size: 200% auto;
+  transition: all 0.5s ease !important;
+
+  &:hover {
+    background-position: right center;
+  }
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -123,7 +138,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklab(54.653% -0.03044 -0.24373);
+  --primary: oklch(54.152% 0.20408 271.914);
   --primary-foreground: oklch(0.97 0.014 254.604);
   --secondary: oklab(96.744% 0.00038 -0.00138);
   --secondary-foreground: oklch(0.21 0.006 285.885);
@@ -158,7 +173,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklab(54.653% -0.03044 -0.24373);
+  --primary: oklch(54.152% 0.20408 271.914);
   --primary-foreground: oklch(0.97 0.014 254.604);
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);

@@ -1,7 +1,12 @@
+// Components
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+
+// Assets
 import RocketIcon from "@/assets/rocket-icon.svg";
 import LaptopIcon from "@/assets/laptop-icon.svg";
+
+// Utils
+import { cn } from "@/lib/utils";
 
 const AboutMe = () => {
   return (
@@ -33,29 +38,30 @@ const AboutMe = () => {
 
       <div
         className={cn(
-          "w-[70%] p-12 bg-[hsla(233,73%,59%,0.1)] rounded-[3rem]",
-          "max-sm:p-4 max-sm:w-[90%] max-sm:rounded-[2rem]",
+          "w-[70%] p-12 bg-[hsla(233,73%,59%,0.1)] rounded-[48px]",
+          "max-md:w-[80%] p-8",
+          "max-sm:p-5 max-sm:w-[90%] max-sm:rounded-[32px]",
         )}
       >
         <div
           className={cn(
-            "flex flex-col gap-7 justify-center items-center bg-white rounded-[3rem] py-12 px-0",
-            "max-sm:rounded-[2rem]",
+            "flex flex-col gap-7 justify-center items-center bg-white rounded-[24px] py-12 px-0",
+            "max-sm:rounded-[16px]",
           )}
         >
           <h1
             className={cn(
-              "text-3xl font-bold capitalize text-blue-600",
+              "text-3xl font-bold capitalize text-primary",
               "max-sm:text-center max-sm:text",
             )}
           >
             Giới Thiệu Bản Thân
           </h1>
 
-          <p className="text-center max-w-[65ch] text-neutral-500 px-4">
-            Xin chào! Mình là sinh viên năm cuối trường đại học CNTT. Mình có
-            niềm đam mê với công việc lập trình và vô cùng yêu thích việc tạo ra
-            các trang web và mobile app hiện đại và có tính ứng dụng cao.
+          <p className="text-center max-w-[65ch] text-neutral-600 px-4 text-pretty">
+            Xin chào! Mình là một lập trình viên Frontend. Mình có niềm đam mê
+            với công việc lập trình và vô cùng yêu thích việc tạo ra các trang
+            web hiện đại, có tính ứng dụng cao và thân thiện với người dùng.
           </p>
 
           <div
@@ -66,13 +72,13 @@ const AboutMe = () => {
             <Button
               asChild
               size={"xl"}
-              className={cn("p-3 w-60 max-w-[80%] shadow-md")}
+              className={cn("p-3 w-60 max-w-[80%] btn-gradient")}
             >
               <a
                 href="../../assets/CV_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                download
+                download={"Pham_Ngoc_Quan_CV.pdf"}
                 className={cn("text-center font-semibold")}
               >
                 Tải CV
@@ -83,7 +89,7 @@ const AboutMe = () => {
               asChild
               variant={"outline"}
               size={"xl"}
-              className={cn("p-3 w-60 max-w-[80%] shadow-md")}
+              className={cn("p-3 w-60 max-w-[80%] shadow-none")}
             >
               <a
                 href="#ProjectContainer"
