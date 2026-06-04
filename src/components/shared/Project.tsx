@@ -87,7 +87,9 @@ const Project = () => {
 
                     <p className={cn("line-clamp-1")}>
                       💡 <span className="text-neutral-600">Develop By</span>{" "}
-                      {project.developBy}
+                      <span className={cn("text-blue-950 font-semibold")}>
+                        {project.developBy}
+                      </span>
                     </p>
                   </div>
                 </CardContent>
