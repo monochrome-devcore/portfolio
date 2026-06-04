@@ -14,7 +14,10 @@ const Project = () => {
   return (
     <section
       id="ProjectContainer"
-      className={cn("mb-30 pt-10 mt-20", "max-xl:my-20")}
+      className={cn(
+        "mb-30 pt-10 mt-20",
+        "max-xl:mt-10 max-xl:pt-10 max-xl:mb-20",
+      )}
     >
       <div className={cn("container flex flex-col gap-8 mx-auto")}>
         {/* Header */}
@@ -70,7 +73,7 @@ const Project = () => {
                     <div className={cn("flex flex-1 flex-col gap-1")}>
                       <h3
                         className={cn(
-                          "text-lg font-semibold capitalize text-blue-950 line-clamp-1",
+                          "text-xl font-semibold capitalize text-blue-950 line-clamp-1",
                         )}
                       >
                         {project.title}
