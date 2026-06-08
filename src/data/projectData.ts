@@ -25,7 +25,7 @@ export const mockProjectData: ProjectData[] = [
       'Dự án thiết kế và phát triển trang web cá nhân đóng vai trò như một bản CV trực quan sinh động nhất. Nơi tổng hợp toàn bộ thông tin, kỹ năng chuyên môn và các cột mốc ấn tượng trong quá trình làm nghề của bản thân.',
     developBy: 'Monochrome',
     githubUrl: '',
-    demoUrl: 'https://portfolio-wine-alpha-70.vercel.app/',
+    demoUrl: 'https://portfolio-monochrome.vercel.app/',
   },
   {
     id: crypto.randomUUID(),
@@ -45,7 +45,7 @@ export const mockProjectData: ProjectData[] = [
       'Ứng dụng cung cấp thông tin dự báo thời tiết theo thời gian thực với độ chính xác cao về nhiệt độ, độ ẩm và tốc độ gió.',
     developBy: 'Monochrome',
     githubUrl: '',
-    demoUrl: 'https://weather-app-one-beta-12.vercel.app/',
+    demoUrl: 'https://weather-app-monochrome.vercel.app/',
   },
   // {
   //   id: crypto.randomUUID(),
