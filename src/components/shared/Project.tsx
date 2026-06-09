@@ -66,6 +66,7 @@ const Project = () => {
                         'aspect-video object-cover rounded-[8px] transition-all duration-500 ease-initial',
                         'hover:scale-[1.03]',
                       )}
+                      loading="lazy"
                     />
                   </div>
 

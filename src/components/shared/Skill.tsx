@@ -95,6 +95,7 @@ const Skill = () => {
                             src={skill.icon}
                             alt={skill.name}
                             className={cn('h-[2em]')}
+                            loading="lazy"
                           />
                           <span
                             className={cn(
@@ -136,6 +137,7 @@ const Skill = () => {
                             src={skill.icon}
                             alt={skill.name}
                             className={cn('h-[2em]')}
+                            loading="lazy"
                           />
                           <span
                             className={cn(
@@ -199,6 +201,7 @@ const Skill = () => {
                     'absolute w-10 h-10 -top-1/2 -left-[5px]',
                     'max-2xl:hidden',
                   )}
+                  loading="lazy"
                 />
 
                 <p className={cn('text-gradient')}>Khả năng làm việc nhóm</p>
@@ -218,6 +221,7 @@ const Skill = () => {
                     'absolute w-10 h-10 -top-1/2 -right-[10px] rotate-180',
                     'max-2xl:hidden',
                   )}
+                  loading="lazy"
                 />
 
                 <p className={cn('text-gradient')}>
@@ -239,6 +243,7 @@ const Skill = () => {
                     'absolute w-10 h-10 -top-1/2 -left-[5px] rotate-[-60deg]',
                     'max-2xl:hidden',
                   )}
+                  loading="lazy"
                 />
 
                 <p className={cn('text-gradient')}>Tư duy làm sản phẩm</p>
@@ -258,6 +263,7 @@ const Skill = () => {
                     'absolute w-10 h-10 -top-1/2 right-[3%] scale-x-[-1] rotate-[-10deg]',
                     'max-2xl:hidden',
                   )}
+                  loading="lazy"
                 />
 
                 <p className={cn('text-gradient')}>Ham học hỏi</p>
