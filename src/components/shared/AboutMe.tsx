@@ -8,8 +8,14 @@ import MyCV from '@/assets/Pham_Ngoc_Quan_CV.pdf';
 
 // Utils
 import { cn } from '@/lib/utils';
+import { downloadStaticFile } from '@/utils/downloadHelper';
 
 const AboutMe = () => {
+  const handleDownloadCV = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    downloadStaticFile(MyCV, 'Pham_Ngoc_Quan_CV.pdf');
+  };
+
   return (
     <section
       className={cn(
@@ -80,10 +86,11 @@ const AboutMe = () => {
             >
               <a
                 href={MyCV}
-                target="_blank"
-                rel="noopener noreferrer"
-                download={'Pham_Ngoc_Quan_CV.pdf'}
+                // target="_blank"
+                // rel="noopener noreferrer"
+                // download={'Pham_Ngoc_Quan_CV.pdf'}
                 className={cn('text-center font-semibold')}
+                onClick={handleDownloadCV}
               >
                 Tải CV
               </a>
