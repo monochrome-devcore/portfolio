@@ -44,7 +44,7 @@ const Skill = () => {
           {/* Item 1 */}
           <div
             className={cn(
-              'overflow-hidden rounded-[24px] bg-[url(@/assets/cat1.jpeg)] bg-center bg-no-repeat bg-cover p-8 shadow-md select-none',
+              'overflow-hidden rounded-[24px] bg-[url(@/assets/cat4.jpg)] bg-center bg-no-repeat bg-cover p-8 shadow-md select-none',
               'max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-first',
             )}
           ></div>
