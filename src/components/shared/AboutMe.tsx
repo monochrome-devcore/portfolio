@@ -27,7 +27,7 @@ const AboutMe = () => {
         src={RocketIcon}
         alt="rocket icon"
         className={cn(
-          'absolute -z-10 w-[300px] h-auto -top-[20%] left-[1%]',
+          'absolute w-[250px] h-auto -top-[20%] left-[1%]',
           'max-md:hidden',
           'animate-float',
         )}
@@ -48,11 +48,12 @@ const AboutMe = () => {
           'w-[70%] p-12 bg-[hsla(233,73%,59%,0.1)] rounded-[48px]',
           'max-md:w-[80%] p-8',
           'max-sm:p-5 max-sm:w-[90%] max-sm:rounded-[32px]',
+          'dark:bg-[#262B52]',
         )}
       >
         <div
           className={cn(
-            'flex flex-col gap-7 justify-center items-center bg-white rounded-[24px] py-12 px-0',
+            'flex flex-col gap-7 justify-center items-center bg-chip rounded-[24px] py-12 px-0',
             'max-sm:rounded-[16px]',
           )}
         >
@@ -60,12 +61,21 @@ const AboutMe = () => {
             className={cn(
               'text-3xl font-bold capitalize text-primary',
               'max-sm:text-center max-sm:text',
+              // 'dark:text-[#8b98ff]',
+              // 'dark:text-transparent dark:bg-linear-to-br dark:from-[#4776E6] dark:to-[#8E54E9] dark:bg-clip-text',
+              // 'dark:text-transparent dark:bg-linear-to-br dark:from-[#54bfed] dark:to-[#5473ed] dark:bg-clip-text',
+              'dark:text-gradient',
             )}
           >
             Giới Thiệu Bản Thân
           </h1>
 
-          <p className="text-center max-w-[65ch] text-neutral-600 px-4 text-pretty">
+          <p
+            className={cn(
+              'text-center max-w-[65ch] text-neutral-600 px-4 text-pretty',
+              'dark:text-muted-foreground',
+            )}
+          >
             Xin chào! Mình là một lập trình viên Frontend. Mình có niềm đam mê
             với công việc lập trình và vô cùng yêu thích việc tạo ra các trang
             web hiện đại, có tính ứng dụng cao và thân thiện với người dùng.

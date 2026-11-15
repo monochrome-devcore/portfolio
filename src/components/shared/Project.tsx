@@ -29,6 +29,7 @@ const Project = () => {
           <p
             className={cn(
               'text-center max-w-[65ch] text-neutral-600 px-4 text-pretty',
+              'dark:text-muted-foreground',
             )}
           >
             Bộ sưu tập các dự án do mình thiết kế và tham gia này giúp mình củng
@@ -47,8 +48,9 @@ const Project = () => {
             <Card
               key={project.id}
               className={cn(
-                'group text-base border border-blue-950/5 rounded-[16px] bg-white p-0 shadow-md ring-0 transition-all duration-500 ease-initial',
-                'hover:shadow-xl hover:scale-[1.03] hover:-skew-x-1 hover:-skew-y-1',
+                'group text-base border border-blue-950/5 rounded-[16px] bg-white p-0 shadow-md ring-0 transition-all duration-350',
+                'dark:bg-[#1c2142] dark:border-[#262b52]',
+                'hover:shadow-xl hover:-translate-y-1.5',
               )}
             >
               <Link
@@ -64,7 +66,6 @@ const Project = () => {
                       alt="project 1"
                       className={cn(
                         'aspect-video object-cover rounded-[8px] transition-all duration-500 ease-initial',
-                        'hover:scale-[1.03]',
                       )}
                       loading="lazy"
                     />
@@ -75,6 +76,7 @@ const Project = () => {
                       <h3
                         className={cn(
                           'text-xl font-semibold capitalize text-blue-950 line-clamp-1',
+                          'dark:text-[#eef0ff]',
                         )}
                       >
                         {project.title}
@@ -83,6 +85,7 @@ const Project = () => {
                       <p
                         className={cn(
                           'text-base text-neutral-600 line-clamp-3 text-pretty',
+                          'dark:text-muted-foreground',
                         )}
                       >
                         {project.description}
@@ -90,8 +93,21 @@ const Project = () => {
                     </div>
 
                     <p className={cn('text-[14px] line-clamp-1')}>
-                      💡 <span className="text-neutral-600">Develop By</span>{' '}
-                      <span className={cn('text-blue-950 font-semibold')}>
+                      💡{' '}
+                      <span
+                        className={cn(
+                          'text-neutral-600',
+                          'dark:text-muted-foreground',
+                        )}
+                      >
+                        Develop By
+                      </span>{' '}
+                      <span
+                        className={cn(
+                          'text-blue-950 font-semibold',
+                          'dark:text-[#eef0ff]',
+                        )}
+                      >
                         {project.developBy}
                       </span>
                     </p>

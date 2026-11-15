@@ -4,10 +4,16 @@ import { Link } from 'react-router';
 // Assets
 import AvatarImg from '@/assets/avatar.jpg';
 
+// Components
+import { useTheme } from '@/theme/useTheme';
+
 // Utils
 import { cn } from '@/lib/utils';
+import ThemeCord from '@/components/shared/ThemeCord';
 
 const Header = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <header className={cn('mt-10', 'max-md:mt-12')}>
       <div
@@ -27,18 +33,21 @@ const Header = () => {
             <div
               className={cn(
                 'absolute inset-0 z-0 rounded-full bg-primary animate-voice-ripple',
+                'dark:base-gradient',
               )}
             />
 
             <div
               className={cn(
                 'absolute inset-0 rounded-full bg-primary animate-voice-ripple [animation-delay:1000ms] z-0',
+                'dark:base-gradient',
               )}
             />
 
             <div
               className={cn(
                 'absolute inset-0 rounded-full bg-primary animate-voice-ripple [animation-delay:2000ms] z-0',
+                'dark:base-gradient',
               )}
             />
 
@@ -59,7 +68,7 @@ const Header = () => {
             <div className={cn('flex gap-1.5 text-center', 'max-md:flex-col')}>
               <div
                 className={cn(
-                  'px-3 py-1 text-sm rounded-[4px] text-blue-950 bg-blue-50',
+                  'px-3 py-1 text-sm rounded-[8px] text-blue-950 dark:text-foreground bg-blue-50 dark:bg-[#1c2142]',
                 )}
               >
                 Lập trình website
@@ -67,7 +76,7 @@ const Header = () => {
 
               <div
                 className={cn(
-                  'px-3 py-1 text-sm rounded-[4px] text-blue-950 bg-blue-50 line-clamp-1',
+                  'px-3 py-1 text-sm rounded-[8px] text-blue-950 dark:text-foreground bg-blue-50 dark:bg-[#1c2142] line-clamp-1',
                 )}
               >
                 Frontend developer
@@ -76,12 +85,17 @@ const Header = () => {
 
             <p
               className={cn(
-                'text-neutral-600',
+                // 'text-neutral-600',
+                'text-muted-foreground',
                 'max-xl:text-center max-xl:max-w-screen-xs',
               )}
             >
               Mong muốn ứng tuyển vị trí{' '}
-              <span className={cn('font-semibold text-blue-950')}>
+              <span
+                className={cn(
+                  'font-semibold text-blue-950 dark:text-foreground',
+                )}
+              >
                 Junior Developer
               </span>{' '}
               trong lĩnh vực phát triển website.
@@ -99,16 +113,20 @@ const Header = () => {
             Thông Tin Liên Hệ
           </h2>
 
-          <p className={cn('text-neutral-600')}>
+          <p className={cn('text-muted-foreground')}>
             Gửi email cho mình tại:{' '}
-            <span className={cn('font-semibold text-blue-950')}>
+            <span
+              className={cn('font-semibold text-blue-950 dark:text-foreground')}
+            >
               monochrome.dev@gmail.com
             </span>
           </p>
 
-          <p className={cn('text-neutral-600')}>
+          <p className={cn('text-muted-foreground')}>
             Github của mình:{' '}
-            <span className={cn('font-semibold text-blue-950')}>
+            <span
+              className={cn('font-semibold text-blue-950 dark:text-foreground')}
+            >
               <Link
                 to={'https://github.com/monochrome-devcore'}
                 target="_blank"
@@ -120,6 +138,9 @@ const Header = () => {
           </p>
         </div>
       </div>
+
+      {/* Toggle đổi theme */}
+      <ThemeCord dark={theme === 'dark'} onToggle={toggleTheme} />
     </header>
   );
 };
