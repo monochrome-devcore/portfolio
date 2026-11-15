@@ -1,4 +1,5 @@
 // Components
+import { Marquee } from '@/components/ui/marquee';
 
 // Assets
 import CheckIcon from '@/assets/check-icon.svg';
@@ -9,7 +10,6 @@ import { cn } from '@/lib/utils';
 
 // Data
 import { mockTechSkills } from '@/data/skillData';
-import { Marquee } from '@/components/ui/marquee';
 
 const Skill = () => {
   return (
@@ -25,6 +25,7 @@ const Skill = () => {
           <p
             className={cn(
               'text-center max-w-[65ch] text-neutral-600 px-4 text-pretty',
+              'dark:text-muted-foreground',
             )}
           >
             Chuyên xây dựng các ứng dụng web mượt mà bằng React, JavaScript
@@ -54,6 +55,7 @@ const Skill = () => {
             className={cn(
               'flex flex-col justify-between col-span-2 overflow-hidden border-2 border-blue-100 rounded-[24px] bg-[hsl(213,100%,98%)] p-8 shadow-md',
               'max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-2',
+              'dark:bg-[#1c2142] dark:border-[#262b52]',
             )}
           >
             <div className={cn('')}>
@@ -66,7 +68,10 @@ const Skill = () => {
               </div>
 
               <p
-                className={cn('mt-3 text-neutral-600 max-w-[60ch] text-pretty')}
+                className={cn(
+                  'mt-3 text-neutral-600 max-w-[60ch] text-pretty',
+                  'dark:text-muted-foreground',
+                )}
               >
                 Thành thạo nhiều công cụ lập trình web hiện đại, có kinh nghiệm
                 xây dựng các ứng dụng web tương tác, thân thiện với người dùng
@@ -87,7 +92,7 @@ const Skill = () => {
                             'flex items-center justify-center gap-[1.14em] rounded-[12px] py-[0.6em] px-0 w-[12em] font-bold text-sm uppercase',
                             isEven
                               ? 'skill-gradient'
-                              : 'bg-white border border-[hsl(215,100%,94%)]',
+                              : 'bg-white border border-[hsl(215,100%,94%)] dark:bg-[#1c2142] dark:border-[#262b52]',
                           )}
                           key={skill.id}
                         >
@@ -129,7 +134,7 @@ const Skill = () => {
                             'flex items-center justify-center gap-[1.14em] rounded-[12px] py-[0.6em] px-0 w-[12em] font-bold text-sm uppercase',
                             isEven
                               ? 'skill-gradient'
-                              : 'bg-white border border-[hsl(215,100%,94%)]',
+                              : 'bg-white border border-[hsl(215,100%,94%)] dark:bg-[#1c2142] dark:border-[#262b52]',
                           )}
                           key={skill.id}
                         >
@@ -162,6 +167,7 @@ const Skill = () => {
             className={cn(
               'flex flex-col justify-between col-span-2 overflow-hidden border-2 border-blue-100 rounded-[24px] bg-[hsl(213,100%,98%)] p-8 shadow-md',
               'max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-last',
+              'dark:bg-[#1c2142] dark:border-[#262b52]',
             )}
           >
             <div className={cn('')}>
@@ -174,7 +180,10 @@ const Skill = () => {
               </div>
 
               <p
-                className={cn('mt-3 text-neutral-500 max-w-[60ch] text-pretty')}
+                className={cn(
+                  'mt-3 text-neutral-500 max-w-[60ch] text-pretty',
+                  'dark:text-muted-foreground',
+                )}
               >
                 Kỹ năng giao tiếp, cộng tác, và giải quyết vấn đề xuất sắc, với
                 thái độ chủ động và ham học hỏi, dễ dàng thích nghi trong môi
@@ -192,6 +201,7 @@ const Skill = () => {
                   'w-[244px] h-[36px] border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize',
                   'absolute top-[20%] left-[5%] -rotate-2',
                   'max-2xl:static max-2xl:rotate-none',
+                  'dark:skill-gradient dark:border-0',
                 )}
               >
                 <img
@@ -204,7 +214,9 @@ const Skill = () => {
                   loading="lazy"
                 />
 
-                <p className={cn('text-gradient')}>Khả năng làm việc nhóm</p>
+                <p className={cn('text-gradient', 'dark:text-foreground')}>
+                  Khả năng làm việc nhóm
+                </p>
               </div>
 
               <div
@@ -212,6 +224,7 @@ const Skill = () => {
                   'w-[244px] h-[36px] border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize',
                   'absolute bottom-[5%] left-[10%] rotate-2',
                   'max-2xl:static max-2xl:rotate-none',
+                  'dark:skill-gradient dark:border-0',
                 )}
               >
                 <img
@@ -224,7 +237,7 @@ const Skill = () => {
                   loading="lazy"
                 />
 
-                <p className={cn('text-gradient')}>
+                <p className={cn('text-gradient', 'dark:text-foreground')}>
                   Quản lý thời gian hiệu quả
                 </p>
               </div>
@@ -234,6 +247,7 @@ const Skill = () => {
                   'w-[244px] h-[36px] border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize',
                   'absolute top-[20%] right-[5%] -rotate-2',
                   'max-2xl:static max-2xl:rotate-none',
+                  'dark:skill-gradient dark:border-0',
                 )}
               >
                 <img
@@ -246,7 +260,9 @@ const Skill = () => {
                   loading="lazy"
                 />
 
-                <p className={cn('text-gradient')}>Tư duy làm sản phẩm</p>
+                <p className={cn('text-gradient', 'dark:text-foreground')}>
+                  Tư duy làm sản phẩm
+                </p>
               </div>
 
               <div
@@ -254,6 +270,7 @@ const Skill = () => {
                   'w-[244px] h-[36px] border border-[hsl(215,100%,94%)] rounded-[24px] bg-white flex items-center justify-center text-sm font-semibold capitalize',
                   'absolute bottom-[5%] right-0 rotate-2',
                   'max-2xl:static max-2xl:rotate-none',
+                  'dark:skill-gradient dark:border-0',
                 )}
               >
                 <img
@@ -266,7 +283,9 @@ const Skill = () => {
                   loading="lazy"
                 />
 
-                <p className={cn('text-gradient')}>Ham học hỏi</p>
+                <p className={cn('text-gradient', 'dark:text-foreground')}>
+                  Ham học hỏi
+                </p>
               </div>
             </div>
           </div>
