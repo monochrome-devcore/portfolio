@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { motion } from 'motion/react';
 
 type Point = { x: number; y: number; ox: number; oy: number };
 
@@ -240,7 +241,10 @@ const ThemeCord = ({ dark, onToggle, className }: ThemeCordProps) => {
   }, []);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: '-10vh' }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: 0.2 }}
       ref={boxRef}
       className={cn(
         'pointer-events-none fixed right-6 top-[env(safe-area-inset-top,0px)] z-50 h-px w-11 max-md:right-3.5',
@@ -311,7 +315,7 @@ const ThemeCord = ({ dark, onToggle, className }: ThemeCordProps) => {
           />
         )}
       </button>
-    </div>
+    </motion.div>
   );
 };
 

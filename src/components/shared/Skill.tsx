@@ -1,5 +1,8 @@
 // Components
 import { Marquee } from '@/components/ui/marquee';
+import { StaggerContainer } from '@/components/motion/Stagger';
+import FadeIn from '@/components/motion/FadeIn';
+import { SlideLeft, SlideRight } from '@/components/motion/Slide';
 
 // Assets
 import CheckIcon from '@/assets/check-icon.svg';
@@ -17,41 +20,49 @@ const Skill = () => {
       <div
         className={cn('container flex flex-col gap-8 mx-auto my-0 py-0 px-8')}
       >
-        <div className="flex flex-col items-center gap-4">
-          <h1 className={cn('text-[32px] font-semibold', 'max-md:text-[26px]')}>
-            Kỹ năng & Chuyên môn
-          </h1>
+        <StaggerContainer className="flex flex-col items-center gap-4">
+          <FadeIn>
+            <h1
+              className={cn('text-[32px] font-semibold', 'max-md:text-[26px]')}
+            >
+              Kỹ năng & Chuyên môn
+            </h1>
+          </FadeIn>
 
-          <p
-            className={cn(
-              'text-center max-w-[65ch] text-neutral-600 px-4 text-pretty',
-              'dark:text-muted-foreground',
-            )}
-          >
-            Chuyên xây dựng các ứng dụng web mượt mà bằng React, JavaScript
-            (ES6+) và các CSS Framework hiện đại như Tailwind. Có tư duy tốt về
-            UI/UX, thành thạo Git workflow và quản lý luồng dữ liệu phức tạp
-            trong dự án. Tập trung tối ưu hóa trải nghiệm người dùng và phối hợp
-            nhịp nhàng với đội ngũ thiết kế, hệ thống.
-          </p>
-        </div>
+          <FadeIn>
+            <p
+              className={cn(
+                'text-center max-w-[65ch] text-neutral-600 px-4 text-pretty',
+                'dark:text-muted-foreground',
+              )}
+            >
+              Chuyên xây dựng các ứng dụng web mượt mà bằng React, JavaScript
+              (ES6+) và các CSS Framework hiện đại như Tailwind. Có tư duy tốt
+              về UI/UX, thành thạo Git workflow và quản lý luồng dữ liệu phức
+              tạp trong dự án. Tập trung tối ưu hóa trải nghiệm người dùng và
+              phối hợp nhịp nhàng với đội ngũ thiết kế, hệ thống.
+            </p>
+          </FadeIn>
+        </StaggerContainer>
 
-        <div
+        <StaggerContainer
           className={cn(
             'grid grid-cols-[repeat(3,minmax(100px,1fr))] grid-rows-[repeat(2,minmax(320px,auto))] gap-3',
             'max-md:grid-cols-[repeat(1,minmax(200px,1fr))] max-md:grid-rows-[repeat(4,minmax(280px,auto))]',
           )}
         >
           {/* Item 1 */}
-          <div
+          <SlideLeft
             className={cn(
               'overflow-hidden rounded-[24px] bg-[url(@/assets/cat4.jpg)] bg-center bg-no-repeat bg-cover p-8 shadow-md select-none',
-              'max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-first',
+              'max-md:p-4  max-md:order-first',
             )}
-          ></div>
+          >
+            <div></div>
+          </SlideLeft>
 
           {/* Item 2 */}
-          <div
+          <SlideRight
             className={cn(
               'flex flex-col justify-between col-span-2 overflow-hidden border-2 border-blue-100 rounded-[24px] bg-[hsl(213,100%,98%)] p-8 shadow-md',
               'max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-2',
@@ -160,10 +171,10 @@ const Skill = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </SlideRight>
 
           {/* Item 3 */}
-          <div
+          <SlideLeft
             className={cn(
               'flex flex-col justify-between col-span-2 overflow-hidden border-2 border-blue-100 rounded-[24px] bg-[hsl(213,100%,98%)] p-8 shadow-md',
               'max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-last',
@@ -288,17 +299,19 @@ const Skill = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </SlideLeft>
 
           {/* Item 4 */}
-          <div
+          <SlideRight
             className={cn(
               'overflow-hidden rounded-[24px] bg-[url(@/assets/cat3.jpeg)] bg-center bg-no-repeat bg-cover p-8 shadow-md',
               'hover:bg-[url(@/assets/cat2.jpeg)]',
               'max-md:p-4 max-md:col-span-1 max-md:row-span-1 max-md:order-3',
             )}
-          ></div>
-        </div>
+          >
+            <></>
+          </SlideRight>
+        </StaggerContainer>
       </div>
     </section>
   );
