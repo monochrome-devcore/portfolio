@@ -1,4 +1,10 @@
+// Libs
+import { motion } from 'motion/react';
+import { fadeUp, scaleIn, stagger } from '@/lib/motion/variants';
+
 // Components
+import { SlideLeft, SlideRight } from '@/components/motion/Slide';
+import { Float } from '@/components/motion/Float';
 import { Button } from '@/components/ui/button';
 
 // Assets
@@ -23,27 +29,42 @@ const AboutMe = () => {
         'max-md:my-[80px] max-md:mx-0',
       )}
     >
-      <img
-        src={RocketIcon}
-        alt="rocket icon"
-        className={cn(
-          'absolute w-[250px] h-auto -top-[20%] left-[1%]',
-          'max-md:hidden',
-          'animate-float',
-        )}
-      />
+      <SlideLeft
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className={cn('absolute -top-[20%] left-[1%] z-10', 'max-md:hidden')}
+      >
+        <Float transition={{ delay: 1.2 }} whileInView={{ y: [0, -12, 0] }}>
+          <img
+            src={RocketIcon}
+            alt="rocket icon"
+            className={cn(
+              'w-[250px] h-auto',
+              // 'animate-float',
+            )}
+          />
+        </Float>
+      </SlideLeft>
 
-      <img
-        src={LaptopIcon}
-        alt="laptop icon"
-        className={cn(
-          'absolute w-[300px] h-auto -bottom-[20%] right-0',
-          'max-md:hidden',
-          'animate-float-delay',
-        )}
-      />
+      <SlideRight
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className={cn('absolute -bottom-[20%] right-0 z-10', 'max-md:hidden')}
+      >
+        <Float transition={{ delay: 1.2 }}>
+          <img
+            src={LaptopIcon}
+            alt="laptop icon"
+            className={cn(
+              'w-[300px] h-auto ',
+              // 'animate-float-delay',
+            )}
+          />
+        </Float>
+      </SlideRight>
 
-      <div
+      <motion.div
+        variants={scaleIn}
+        initial="hidden"
+        animate="visible"
         className={cn(
           'w-[70%] p-12 bg-[hsla(233,73%,59%,0.1)] rounded-[48px]',
           'max-md:w-[80%] p-8',
@@ -51,13 +72,15 @@ const AboutMe = () => {
           'dark:bg-[#262B52]',
         )}
       >
-        <div
+        <motion.div
+          variants={stagger(0.1, 0.2)}
           className={cn(
             'flex flex-col gap-7 justify-center items-center bg-chip rounded-[24px] py-12 px-0',
             'max-sm:rounded-[16px]',
           )}
         >
-          <h1
+          <motion.h1
+            variants={fadeUp}
             className={cn(
               'text-3xl font-bold capitalize text-primary',
               'max-sm:text-center max-sm:text',
@@ -68,9 +91,10 @@ const AboutMe = () => {
             )}
           >
             Giới Thiệu Bản Thân
-          </h1>
+          </motion.h1>
 
-          <p
+          <motion.p
+            variants={fadeUp}
             className={cn(
               'text-center max-w-[65ch] text-neutral-600 px-4 text-pretty',
               'dark:text-muted-foreground',
@@ -79,9 +103,10 @@ const AboutMe = () => {
             Xin chào! Mình là một lập trình viên Frontend. Mình có niềm đam mê
             với công việc lập trình và vô cùng yêu thích việc tạo ra các trang
             web hiện đại, có tính ứng dụng cao và thân thiện với người dùng.
-          </p>
+          </motion.p>
 
-          <div
+          <motion.div
+            variants={fadeUp}
             className={cn(
               'flex gap-4 items-center justify-center flex-wrap max-w-[90%]',
             )}
@@ -92,6 +117,7 @@ const AboutMe = () => {
               className={cn(
                 'p-3 w-[240px] max-w-[80%] rounded-[8px] btn-gradient',
                 'max-md:text-[14px]',
+                'btn-interactive',
               )}
             >
               <a
@@ -113,6 +139,7 @@ const AboutMe = () => {
               className={cn(
                 'p-3 w-[240px] max-w-[80%] rounded-[8px] shadow-none',
                 'max-md:text-[14px]',
+                'btn-interactive',
               )}
             >
               <a
@@ -122,9 +149,9 @@ const AboutMe = () => {
                 Xem Dự Án
               </a>
             </Button>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

@@ -1,3 +1,6 @@
+// Components
+import FadeIn from '@/components/motion/FadeIn';
+
 // Utils
 import { cn } from '@/lib/utils';
 
@@ -11,15 +14,17 @@ const Footer = () => {
       )}
     >
       <div className="container mx-auto">
-        <p className="">
-          © {new Date().getFullYear()} Develop by{' '}
-          <span
-            className={cn('font-semibold text-blue-950 dark:text-foreground')}
-          >
-            Monochrome
-          </span>{' '}
-          ❤️
-        </p>
+        <FadeIn>
+          <p className="">
+            © {new Date().getFullYear()} Develop by{' '}
+            <span
+              className={cn('font-semibold text-blue-950 dark:text-foreground')}
+            >
+              Monochrome
+            </span>{' '}
+            ❤️
+          </p>
+        </FadeIn>
       </div>
     </footer>
   );

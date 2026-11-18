@@ -6,9 +6,14 @@
   ],
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"],
+      "@/assets/*": ["./src/assets/*"],
       "@/components/*": ["./src/components/*"],
-      "@/assets/*": ["./src/assets/*"]
+      "@/data/*": ["./src/data/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/routers/*": ["./src/routers/*"],
+      "@/theme/*": ["./src/theme/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/*": ["./src/*"]
     }
   }
 }

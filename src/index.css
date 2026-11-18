@@ -62,7 +62,7 @@
   --animate-float-delay: float 7s 1s ease-in-out infinite;
   --animate-move-left: move-left 30s linear infinite;
   --animate-move-right: move-right 60s linear infinite;
-  --animate-voice-ripple: voice-ripple 3s linear infinite;
+  --animate-voice-ripple: voice-ripple 3s 0.3s linear infinite;
 
   /* Keyframe */
   @keyframes float {
@@ -198,6 +198,10 @@
 
 @utility base-gradient {
   background-image: linear-gradient(to bottom right, #5cc0ff, #8b98ff);
+}
+
+@utility btn-interactive {
+  @apply transition-all duration-300 ease-out active:scale-[0.95];
 }
 
 :root {
